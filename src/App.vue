@@ -3,6 +3,7 @@ import Header from "./components/layout/Header.vue";
 import Menu from "./components/layout/Menu.vue";
 import Slide from "./components/layout/Slide.vue";
 import Content from "./components/layout/Content.vue";
+import Footer from "./components/layout/Footer.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Content from "./components/layout/Content.vue";
         <Menu></Menu>
         <Slide class="mt-10"></Slide>
         <Content></Content>
+        <Footer></Footer>
     </div>
 </template>
 
