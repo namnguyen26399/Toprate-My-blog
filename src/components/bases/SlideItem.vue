@@ -29,6 +29,7 @@
                     rounded-sm
                     relative
                     z-10
+                    text-shadow
                 "
             >
                 Read More

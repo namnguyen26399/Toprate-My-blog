@@ -1,5 +1,9 @@
 <template>
-  <div class="w-100 h-[500px] bg-red-100"> Footer</div>
+  <div class="w-full h-auto bg-[#f0f0f0] pb-5"> 
+      <img class="w-56 mx-auto" src="../../assets/logo2.png" alt="">
+      <p class="text-center">There are many variations of passages of Lorem Ipsum available.</p>
+
+  </div>
 </template>
 
 <script>

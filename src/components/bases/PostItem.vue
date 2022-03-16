@@ -1,6 +1,9 @@
 <template>
-    <div id="Post-Item" class="w-full h-[220px] flex border-b mt-5 border-[#ebebeb]">
-        <div class="w-[40%]  p-4 relative" id="img">
+    <div
+        id="Post-Item"
+        class="w-full h-[220px] flex border-b mt-5 border-[#ebebeb]"
+    >
+        <div class="w-[40%] p-4 relative" id="img">
             <div
                 id="border-top-left"
                 class="
@@ -24,7 +27,7 @@
                 <img src="../../assets/img1.jpg" alt="" />
             </div>
         </div>
-        <div class="w-[60%] pr-4" id="content">
+        <div class="w-[60%] pr-4 relative" id="content">
             <div class="w-[70%] text-left font-semibold text-[20px]" id="title">
                 Lòng Đau Tình Phai (SINGLE) - HKT BAND Ft Chấn Hào 2013
             </div>
@@ -58,13 +61,58 @@
                 embarrassing hidden in the middle of text.
             </div>
             <div class="mt-3">
-                <button class="bg-blue-400 text-white p-[6px] rounded-[2px] btn-read-more">  Read more</button>
+                <button
+                    class="
+                        bg-blue-400
+                        text-white
+                        p-[6px]
+                        rounded-[2px]
+                        btn-read-more
+                    "
+                >
+                    Read more
+                </button>
             </div>
             <div class="mt-5 relative flex justify-between" id="author">
                 <p>Ng. Sy Nam</p>
-                <div class="flex ">
+                <div class="flex">
                     <p class="mr-2">803</p>
-                    <img class="mr-2" src="../../assets/seen.png" alt="">
+                    <img class="mr-2" src="../../assets/seen.png" alt="" />
+                </div>
+            </div>
+            <button
+                @click="btnMore"
+                class="text-xl font-bold absolute top-2 right-0"
+            >
+                <img class="w-[17px]" src="../../assets/more.png" alt="" />
+            </button>
+            <div 
+            v-if="isOpen"
+                id="edit-del"
+                class="
+                    absolute
+                    top-0
+                    right-6
+                    bg-white
+                    w-28
+                    h-16
+                    border
+                    rounded-md
+                "
+            >
+                <div
+                    class="
+                        text-center
+                        h-1/2
+                        rounded-tr-md rounded-tl-md
+                        bg
+                        border-b
+                    "
+                >
+                    <a href="#">Edit</a>
+                </div>
+                <div class="text-center h-1/2 rounded-br-md rounded-bl-md">
+                    <a href="#">Delete</a>
                 </div>
             </div>
         </div>
@@ -72,7 +120,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods: {
+        btnMore() {
+            this.isOpen = !this.isOpen;
+        },
+    },
+    data(){
+        return{
+            isOpen:false
+        }
+    }
+};
 </script>
 
 <style scope>
@@ -87,10 +146,16 @@ export default {};
     line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.btn-read-more:hover{
+.btn-read-more:hover {
     background-color: rgb(31, 127, 252);
 }
-.btn-read-more { 
+.btn-read-more {
     transition: 0.6s ease-out;
+}
+#edit-del div:hover { 
+    background-color: rgb(235, 235, 235);
+}
+#edit-del div{
+    transition: 0.4s ease-in-out;
 }
 </style>

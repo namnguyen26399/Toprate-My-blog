@@ -12,8 +12,8 @@ import Footer from "./components/layout/Footer.vue";
         <Menu></Menu>
         <Slide class="mt-10"></Slide>
         <Content></Content>
-        <Footer></Footer>
     </div>
+    <Footer class="max-w-[1240px] mx-auto"></Footer>
 </template>
 
 <style>
